@@ -1,0 +1,50 @@
+{
+  "name": "test-admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "i": "^0.3.7",
+    "json": "^11.0.0",
+    "json-schema-faker": "^0.5.0-rcv.44",
+    "json-server": "^0.17.0",
+    "json-graphql-server": "^2.3.1",
+    "prop-types": "^15.8.1",
+    "ra-data-json-server": "^4.1.5",
+    "ra-data-simple-rest": "^4.2.0",
+    "ra-data-graphql-simple": "^4.2.1",
+    "react": "^18.2.0",
+    "react-admin": "^4.1.5",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "server": "^1.0.37",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "server": "json-server --watch data.json --port 5000 --middlewares ./range.js | json-graphql-server data.json --p 8000",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

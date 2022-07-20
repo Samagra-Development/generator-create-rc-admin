@@ -1,0 +1,58 @@
+[
+    {
+        "entity": "Teacher",
+        "fields": [
+            {
+                "path": "IdentityDetails.fullName",
+                "header": "Full Name"
+            },
+            {
+                "path": "IdentityDetails.gender",
+                "header": "Gender"
+            },
+            {
+                "path": "IdentityDetails.dob",
+                "header": "Date of Birth"
+            },
+            {
+                "path": "contactDetails.email",
+                "header": "Email"
+            },
+            {
+                "path": "contactDetails.mobile",
+                "header": "Mo. No."
+            }
+        ]
+    },{
+        "entity": "Student",
+        "fields":[
+            {
+                "path": "IdentityDetails.fullName",
+                "header" : "Full Name"
+            },{
+                "path" : "guardianDetails.fullName",
+                "header" : "Guardian"
+            },{
+                "path" : "address.state",
+                "header" : "State"
+            }
+        ]
+    },{
+        "entity" : "Institute",
+        "fields":[
+            {
+                "path" : "InstituteDetails.instituteName",
+                "header" : "Name"
+            },{
+                "path" : "InstituteDetails.establishmentYear",
+                "header" : "Establishment Year"
+            },{
+                "path" : "InstituteDetails.website",
+                "header" : "Website"
+            },{
+                "path" : "Affiliation.board",
+                "header" : "Board"
+            }
+        ]
+    }
+]

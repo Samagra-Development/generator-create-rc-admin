@@ -1,0 +1,14 @@
+.RaAppBar-toolbar{
+    background-color: #1a2b56;
+}
+.RaDatagrid-headerRow{
+    background-color: peachpuff;
+}
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.pic>img{
+    width: 50vw;
+}
