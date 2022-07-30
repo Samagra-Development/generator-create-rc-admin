@@ -24,5 +24,3 @@ const printPaths = (obj, parentPath) => {
 printPaths(StudentObj);
 printPaths(TeacherObj);
 printPaths(InstituteObj);
-
-console.log(dummy_array);

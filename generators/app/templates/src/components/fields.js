@@ -1,68 +1,55 @@
 import * as React from "react";
 import { dummy_array } from "./schemas/schema-faker";
-import {
-    List,
-    Datagrid,
-    TextField,
-    EditButton,
-    Edit,
-    Create,
-    SimpleForm,
-    TextInput,
-    useRecordContext,
-    useResourceContext
-} from "react-admin";
+import * as RA from "react-admin";
 
 
 const Config = require('./schemas/config.json');
 let visibleFields = [];
 
-const FieldTitle = () => {
-    const record = useRecordContext();
-    return <span>{record ? `${record}` : ''}</span>;
-};
-
 const lower_dummy_array = dummy_array.map(item => item.toLowerCase());
 // console.log(dummy_array);
 
 export const FieldList = () => {
-    const ResourceFields = useResourceContext();
+    const ResourceFields = RA.useResourceContext();
     visibleFields = Config[Config.findIndex(x => x.entity.toLowerCase() === ResourceFields.toLowerCase())].fields;
-    return <List>
-        <Datagrid>
+    return <RA.List>
+        <RA.Datagrid>
         {visibleFields.map((item, index) => {
-            if(lower_dummy_array.includes(item.path.toLowerCase()))
-                return <TextField source={item.path} label={item.header} key={index}/>
+            if(lower_dummy_array.includes(item.path.toLowerCase())){
+                const FieldName = RA[item.type+'Field'];
+                return <FieldName source={item.path} label={item.header} key={index}/>}
             })}
-            <EditButton />
-        </Datagrid>
-    </List>
+            <RA.EditButton />
+        </RA.Datagrid>
+    </RA.List>
 };
 
 export const FieldEdit = () => {
-    const ResourceFields = useResourceContext();
+    const ResourceFields = RA.useResourceContext();
     visibleFields = Config[Config.findIndex(x => x.entity === ResourceFields)].fields;
     return (
     
-    <Edit>
-        <SimpleForm title={FieldTitle}>
+    <RA.Edit>
+        <RA.SimpleForm>
         {visibleFields.map((item, index) => {
-            if(lower_dummy_array.includes(item.path.toLowerCase()))
-                return <TextInput source={item.path} label={item.header} key={index}/>
+            if(lower_dummy_array.includes(item.path.toLowerCase())){
+                const FieldName = RA[item.type+'Input'];
+                return <FieldName source={item.path} label={item.header} key={index}/>}
             })}
-        </SimpleForm>
-    </Edit>
+        </RA.SimpleForm>
+    </RA.Edit>
 )};
 
 export const FieldCreate = props => {
-    const ResourceFields = useResourceContext();
+    const ResourceFields = RA.useResourceContext();
     visibleFields = Config[Config.findIndex(x => x.entity === ResourceFields)].fields;
     return(
-    <Create {...props}>
-        <SimpleForm >
+    <RA.Create {...props}>
+        <RA.SimpleForm >
         {visibleFields.map((item, index) => {
-                return <TextInput source={item.path} label={item.header} key={index}/>
+                const FieldName = RA[item.type+'Input'];
+                return <FieldName source={item.path} label={item.header} key={index}/>
             })}
-        </SimpleForm>
-    </Create>
+        </RA.SimpleForm>
+    </RA.Create>
 )};

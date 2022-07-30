@@ -7,22 +7,27 @@ module.exports = class extends Generator {
 
       const {api_type} = await this.prompt([{
          name : "api_type",
-         message : "What API dataProvider would you like to use? (REST or GraphQL)"
+         message : "What API dataProvider would you like to use? (REST or GraphQL or SunbirdRC)"
       }]);
       this.api_type = api_type;
+      if(api_type=='SunbirdRC'){
+         const {schema_location} = await this.prompt([{
+            name : "Schema_Location",
+            message : "Pass the Location of the Schema here : "
+         }]);
+         this.schema_location = schema_location;
+         const {api_url} = await this.prompt([{
+            name : "API_URL",
+            message : "Pass the API Url here : "
+         }])
+         this.api_url = api_url;
+      }
 
       const { registry } = await this.prompt([{
          name: 'registry',
          message: 'Which registry would you like to create?'
       }]);
       this.registry = registry;
-
-      const {entities} = await this.prompt([{
-         name : "entities",
-         message : "Enter the entities : ( Separate with commas )"
-      }]);
-      this.entities = entities;
-
    }
    // async prompting() {
 
@@ -36,8 +41,9 @@ module.exports = class extends Generator {
          this.destinationRoot(), 
          { 
             registry : this.registry,
-            entities : this.entities,
-            api_type : this.api_type
+            api_type : this.api_type,
+            schema_location : this.schema_location,
+            api_url : this.api_url,
          }
       )
    }
