@@ -1,0 +1,17 @@
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.pic>img{
+    width: 50vw;
+}
+.spacer{
+    width: 45%;
+}
+.logo-spacer{
+    width: 10%;
+}
+#sunbird-logo{
+    margin: 15px;
+}

@@ -1,0 +1,79 @@
+{
+  "Teacher": [
+    {
+      "id": 1,
+      "IdentityDetails": {
+        "fullName": "Harshil Jani",
+        "gender": "Male",
+        "dob": "28-10-1982"
+      },
+      "contactDetails": {
+        "email": "harshiljani2002@gmail.com",
+        "mobile": "7984677391"
+      }
+    },
+    {
+      "IdentityDetails": {
+        "fullName": "H.C. Verma",
+        "gender": "Male",
+        "dob": "19-09-1955"
+      },
+      "contactDetails": {
+        "email": "hcv@iitk.ac.in",
+        "mobile": "5678903242"
+      },
+      "id": 2
+    },
+    {
+      "IdentityDetails": {
+        "fullName": "Dr. Sarvepalli Radhakrishnan",
+        "gender": "Male",
+        "dob": "09-09-1895"
+      },
+      "contactDetails": {
+        "email": "dr@krishnan.com",
+        "mobile": "5345678133"
+      },
+      "id": 3
+    },
+    {
+      "IdentityDetails": {
+        "fullName": "Savitribai Phule",
+        "gender": "Female",
+        "dob": "21-08-1923"
+      },
+      "contactDetails": {
+        "email": "uyroqavdmgg@temporary-mail.net",
+        "mobile": "2063700099"
+      },
+      "id": 4
+    }
+  ],
+  "Student": [
+    {
+      "id": 1,
+      "IdentityDetails": {
+        "fullName": "Harshil Jani",
+        "gender": "Male",
+        "dob": "28-10-2002"
+      },
+      "contactDetails": {
+        "email": "harshiljani2002@gmail.com",
+        "mobile": "7984677391"
+      }
+    }
+  ],
+  "Institute": [
+    {
+      "id": 1,
+      "instituteDetails": {
+        "instituteName": "SVNIT",
+        "establishmentYear": 1963,
+        "website": "svnit.ac.in"
+      },
+      "affiliation": {
+        "board": "ICSE"
+      }
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Institute",
+    "definitions": {
+        "InstituteDetails": {
+            "$id": "#/properties/InstituteDetails",
+            "type": "object",
+            "title": "The Institute Schema",
+            "required": [],
+            "properties": {
+                "instituteName": {
+                    "$id": "#/properties/instituteName",
+                    "type": "string",
+                    "title": "Institute Name"
+                },
+                "establishmentYear": {
+                    "$id": "#/properties/establishmentYear",
+                    "type": "string",
+                    "title": "Year of establishment of institute"
+                },
+                "gstnId": {
+                    "$id": "#/properties/gstnId",
+                    "type": "string",
+                    "title": "GSTN ID"
+                },
+                "contactNumber": {
+                    "$id": "#/properties/contactNumber",
+                    "type": "string",
+                    "title": "Landline / Mobile"
+                },
+                "email": {
+                    "$id": "#/properties/email",
+                    "type": "string",
+                    "format": "email",
+                    "title": "Email"
+                },
+                "website": {
+                    "$id": "#/properties/website",
+                    "type": "string",
+                    "format": "uri",
+                    "title": "Website"
+                },
+                "category": {
+                    "$id": "#/properties/category",
+                    "type": "string",
+                    "title": "Institute Category (Primary/Secondary etc)",
+                    "enum": [
+                        "Primary",
+                        "Secondary"
+                    ]
+                },
+                "schoolType": {
+                    "$id": "#/properties/schoolType",
+                    "type": "string",
+                    "title": "School Type ",
+                    "enum": [
+                        "Boys",
+                        "Girls",
+                        "Co-ed"
+                    ]
+                },
+                "instituteManagement": {
+                    "$id": "#/properties/instituteManagement",
+                    "type": "string",
+                    "title": "Management of institute"
+                },
+                "committee": {
+                    "$id": "#/properties/instituteManagement",
+                    "type": "string",
+                    "title": "Name of Trust / Society / Managing Committee"
+                },
+                "adminName": {
+                    "$id": "#/properties/adminName",
+                    "type": "string",
+                    "title": "Principal / Dean / Head - Full Name"
+                },
+                "adminEmail": {
+                    "$id": "#/properties/adminEmail",
+                    "type": "string",
+                    "title": "Principal / Dean / Head - Email"
+                },
+                "adminMobile": {
+                    "$id": "#/properties/adminMobile",
+                    "type": "string",
+                    "title": "Principal / Dean / Head - Mobile"
+                },
+                "affiliation": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Affiliation"
+                    },
+                    "title": "Affiliation"
+                }
+            }
+        },
+        "Affiliation": {
+            "type": "object",
+            "properties": {
+                "medium": {
+                    "type": "string",
+                    "enum": [
+                        "English",
+                        "Hindi",
+                        "Gujarati",
+                        "Malayalam",
+                        "Tamil"
+                    ],
+                    "title": "Medium of Education"
+                },
+                "board": {
+                    "type": "string",
+                    "title": "Affiliations Board"
+                },
+                "affiliationNumber": {
+                    "type": "string",
+                    "title": "Affiliation Number"
+                },
+                "grantYear": {
+                    "type": "string",
+                    "title": "Grant year"
+                },
+                "expiryYear": {
+                    "type": "string",
+                    "title": "Expiry Year"
+                },
+                "classes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "Pre-Pri.",
+                            "Class I",
+                            "Class II",
+                            "Class III",
+                            "Class IV",
+                            "Class V",
+                            "Class VI",
+                            "Class VII",
+                            "Class VIII",
+                            "Class IX",
+                            "Class X",
+                            "Class XI",
+                            "Class XII"
+                        ]
+                    },
+                    "title": "Classes / Grades"
+                }
+            }
+        }
+    },
+    "type": "object",
+    "properties": {
+        "InstituteDetails": {
+            "$ref": "#/definitions/InstituteDetails"
+        },
+        "Affiliation": {
+            "$ref": "#/definitions/Affiliation"
+        }
+    },
+    "required": [
+        "InstituteDetails",
+        "Affiliation"
+    ]
+}
