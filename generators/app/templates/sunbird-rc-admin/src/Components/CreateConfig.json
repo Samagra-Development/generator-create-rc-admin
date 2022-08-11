@@ -1,26 +1,61 @@
 [
     {
-         "entity": "Student",
-         "label" : "Studant",
-         "icon" : "List",
-         "fields":[
-             {
-                 "path": "firstName",
-                 "header" : "First Name",
-                 "type" : "Text"
-             },{
-                 "path" : "middleName",
-                 "header" : "Middle Name",
-                 "type" : "Text"
-             },{
-                 "path" : "lastName",
-                 "header" : "Last Name",
-                 "type" : "Text"
-             },{
-                 "path" : "gender",
-                 "header" : "Gender",
-                 "type" : "Text"
-             }
-         ]
-     }
- ]
+        "entity": "Student",
+        "label": "Student",
+        "icon": "List",
+        "fields": [
+            {
+                "path": "firstName",
+                "header": "First Name",
+                "type": "Text"
+            },
+            {
+                "path": "middleName",
+                "header": "Middle Name",
+                "type": "Text"
+            },
+            {
+                "path": "lastName",
+                "header": "Last Name",
+                "type": "Text"
+            },
+            {
+                "path": "gender",
+                "header": "Gender",
+                "type": "Text"
+            }
+        ]
+    },
+    {
+        "entity": "Teacher",
+        "label": "Teacher",
+        "icon": "List",
+        "fields": [
+            {
+                "path": "firstName",
+                "header": "First Name",
+                "type": "Text"
+            },
+            {
+                "path": "middleName",
+                "header": "Middle Name",
+                "type": "Text"
+            },
+            {
+                "path": "lastName",
+                "header": "Last Name",
+                "type": "Text"
+            },
+            {
+                "path": "gender",
+                "header": "Gender",
+                "type": "Text"
+            },
+            {
+                "path": "maritalStatus",
+                "header": "Matrimonial Status",
+                "type": "Text"
+            }
+        ]
+    }
+]
