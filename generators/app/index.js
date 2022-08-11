@@ -14,34 +14,45 @@ module.exports = class extends Generator {
       }]);
       this.api_type = api_type;
       if (api_type == 'SunbirdRC') {
-        this.log("Building Sunbird RC's Registry");
+         this.log("Building Sunbird RC's Registry");
       }
 
       const { registry } = await this.prompt([{
          name: 'registry',
-         message: 'Which registry would you like to create?'
+         message: 'Title Your Registry : '
       }]);
       this.registry = registry;
    }
-   // async prompting() {
 
-   // }
    writing() {
       if (this.api_type != "SunbirdRC") {
          this.log(this.registry);
-         this.fs.copyTpl([
-            this.templatePath('general-admin/**')
-            // `!**/src/components/**`,
-         ],
-            this.destinationRoot(),
-            {
-               registry: this.registry,
-               api_type: this.api_type,
-               schema_location: this.schema_location,
-               api_url: this.api_url,
-            }
-         )
-      } else { 
+         if (this.api_type == "REST") {
+            this.fs.copyTpl([
+               this.templatePath('general-admin/**')
+               // `!**/src/components/**`,
+            ],
+               this.destinationRoot(),
+               {
+                  registry: this.registry,
+                  api_type: this.api_type,
+                  server_type: "json-server --watch data.json --port 5000"
+               }
+            )
+         }else if(this.api_type == "GraphQL"){
+            this.fs.copyTpl([
+               this.templatePath('general-admin/**')
+               // `!**/src/components/**`,
+            ],
+               this.destinationRoot(),
+               {
+                  registry: this.registry,
+                  api_type: this.api_type,
+                  server_type: "json-graphql-server data.json --p 8000"
+               }
+            )
+         }
+      } else {
          this.log(this.registry);
          this.fs.copyTpl([
             this.templatePath('sunbird-rc-admin/**')
@@ -50,9 +61,7 @@ module.exports = class extends Generator {
             this.destinationRoot(),
             {
                registry: this.registry,
-               api_type: this.api_type,
-               schema_location: this.schema_location,
-               api_url: this.api_url,
+               api_type: this.api_type
             }
          )
       }

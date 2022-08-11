@@ -6,7 +6,6 @@ const httpClient = fetchUtils.fetchJson;
 
 export default {
     getList: (resource, params) => {
-        console.log('getList', params);
         const url = `${apiUrl}/${resource}/search`;
         return httpClient(url, {
             method: 'POST',
@@ -23,7 +22,6 @@ export default {
     },
 
     getOne: (resource, params) => {
-        console.log('getOne', params);
         const url = `${apiUrl}/${resource}/${params.id}`;
         return httpClient(url).then(({ json }) => {
             json.id = params.id;
@@ -32,7 +30,6 @@ export default {
     },
 
     create: (resource, params) => {
-        console.log('create', params);
         const url = `${apiUrl}/${resource}/invite`;
         console.log(url, params);
         return httpClient(url, {
@@ -51,7 +48,6 @@ export default {
         }).then(({ json }) => ({ data: json })),
 
     delete: (resource, params) => {
-        console.log('delete', params)
         return httpClient(`${apiUrl}/${resource}/${params.id}`, {
             method: 'DELETE',
         }).then(({ json }) =>{

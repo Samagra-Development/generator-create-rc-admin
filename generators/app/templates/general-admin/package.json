@@ -23,7 +23,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "server": "json-server --watch data.json --port 5000 --middlewares ./range.js | json-graphql-server data.json --p 8000",
+    "server": "<%=server_type%>",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
