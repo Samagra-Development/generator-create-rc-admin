@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "i": "^0.3.7",
     "json": "^11.0.0",
     "json-graphql-server": "^2.3.1",
     "json-schema-faker": "^0.5.0-rcv.44",
