@@ -7,22 +7,26 @@
             {
                 "path": "firstName",
                 "header": "First Name",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "middleName",
                 "header": "Middle Name",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "lastName",
                 "header": "Last Name",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "gender",
                 "header": "Gender",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             }
         ]
     },
@@ -34,27 +38,32 @@
             {
                 "path": "firstName",
                 "header": "First Name",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "middleName",
                 "header": "Middle Name",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "lastName",
                 "header": "Last Name",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "gender",
                 "header": "Gender",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "maritalStatus",
                 "header": "Matrimonial Status",
-                "type": "Text"
+                "type": "Text",
+                "transformation": "text => text"
             }
         ]
     }

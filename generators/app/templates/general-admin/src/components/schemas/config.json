@@ -1,75 +1,94 @@
 [
     {
         "entity": "Teacher",
-        "label" : "T-Char",
-        "icon" : "List",
+        "label": "T-Char",
+        "icon": "List",
         "fields": [
             {
                 "path": "IdentityDetails.fullName",
                 "header": "Full Name",
-                "type" : "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "IdentityDetails.gender",
                 "header": "Gender",
-                "type" : "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "IdentityDetails.dob",
                 "header": "Date of Birth",
-                "type" : "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "contactDetails.email",
                 "header": "Email",
-                "type" : "Text"
+                "type": "Text",
+                "transformation": "text => text"
             },
             {
                 "path": "contactDetails.mobile",
                 "header": "Mo. No.",
-                "type" : "Text"
+                "type": "Text",
+                "transformation": "text => text"
             }
         ]
-    },{
+    },
+    {
         "entity": "Student",
-        "label" : "Studant",
-        "icon" : "List",
-        "fields":[
+        "label": "Studant",
+        "icon": "List",
+        "fields": [
             {
                 "path": "IdentityDetails.fullName",
-                "header" : "Full Name",
-                "type" : "Text"
-            },{
-                "path" : "guardianDetails.fullName",
-                "header" : "Guardian",
-                "type" : "Text"
-            },{
-                "path" : "address.state",
-                "header" : "State",
-                "type" : "Text"
+                "header": "Full Name",
+                "type": "Text",
+                "transformation": "text => text"
+            },
+            {
+                "path": "guardianDetails.fullName",
+                "header": "Guardian",
+                "type": "Text",
+                "transformation": "text => text"
+            },
+            {
+                "path": "address.state",
+                "header": "State",
+                "type": "Text",
+                "transformation": "text => text"
             }
         ]
-    },{
-        "entity" : "Institute",
-        "label" : "Insituth",
-        "icon" : "List",
-        "fields":[
+    },
+    {
+        "entity": "Institute",
+        "label": "Insituth",
+        "icon": "List",
+        "fields": [
             {
-                "path" : "InstituteDetails.instituteName",
-                "header" : "Name",
-                "type" : "Text"
-            },{
-                "path" : "InstituteDetails.establishmentYear",
-                "header" : "Establishment Year",
-                "type" : "Text"
-            },{
-                "path" : "InstituteDetails.website",
-                "header" : "Website",
-                "type" : "Text"
-            },{
-                "path" : "Affiliation.board",
-                "header" : "Board",
-                "type" : "Text"
+                "path": "InstituteDetails.instituteName",
+                "header": "Name",
+                "type": "Text",
+                "transformation": "text => text"
+            },
+            {
+                "path": "InstituteDetails.establishmentYear",
+                "header": "Establishment Year",
+                "type": "Text",
+                "transformation": "text => text"
+            },
+            {
+                "path": "InstituteDetails.website",
+                "header": "Website",
+                "type": "Text",
+                "transformation": "text => text"
+            },
+            {
+                "path": "Affiliation.board",
+                "header": "Board",
+                "type": "Text",
+                "transformation": "text => text"
             }
         ]
     }
